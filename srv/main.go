@@ -6,14 +6,14 @@ import (
 	"xiaoshijie.com/micro/hello/srv/handler"
 	"xiaoshijie.com/micro/hello/srv/subscriber"
 	
-	//"github.com/micro/go-micro/service/grpc"
+	"github.com/micro/go-micro/service/grpc"
 	
 	helloService "xiaoshijie.com/micro/hello/srv/proto/helloService"
 )
 
 func main() {
 	// New Service
-	service := micro.NewService(
+	service := grpc.NewService(
 		micro.Name("go.micro.srv.helloService"),
 		micro.Version("latest"),
 	)
