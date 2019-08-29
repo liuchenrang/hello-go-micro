@@ -5,6 +5,7 @@ import (
 	"github.com/micro/go-micro/client/grpc"
 	_ "github.com/micro/go-micro/client/grpc"
 	"github.com/micro/go-micro/util/log"
+	"os"
 	"xiaoshijie.com/micro/hello/api/client"
 	"xiaoshijie.com/micro/hello/api/handler"
 	
@@ -12,7 +13,9 @@ import (
 )
 func GrpcClient(v string) micro.Option {
 	return func(o *micro.Options) {
-		o.Client = grpc.NewClient()
+		if(os.Getenv("MICRO_CLIENT") == "grpc"){
+			o.Client = grpc.NewClient()
+		}
 	}
 }
 func main() {
