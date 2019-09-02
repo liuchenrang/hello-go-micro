@@ -7,7 +7,7 @@ import (
 	"github.com/micro/go-micro/service/grpc"
 	"github.com/micro/go-micro/util/log"
 	"xiaoshijie.com/micro/hello/srv/handler"
-	helloService "../srv/proto/helloService"
+	helloService "xiaoshijie.com/micro/hello/srv/proto/helloService"
 	"xiaoshijie.com/micro/hello/srv/provider"
 	"xiaoshijie.com/micro/hello/srv/subscriber"
 )
