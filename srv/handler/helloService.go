@@ -2,7 +2,8 @@ package handler
 
 import (
 	"context"
-
+	"github.com/micro/go-micro/config"
+	
 	"github.com/micro/go-micro/util/log"
 
 	helloService "xiaoshijie.com/micro/hello/srv/proto/helloService"
@@ -12,9 +13,10 @@ type HelloService struct{}
 
 // Call is a single request handler called via client.Call or the generated client code
 func (e *HelloService) Call(ctx context.Context, req *helloService.Request, rsp *helloService.Response) error {
-	log.Log("Received HelloService.Call request " + req.Name)
-	println("11" + req.Name)
-	rsp.Msg = "Hello " + req.Name
+	log.Log("Received HelloService.Call request 11 " + req.Name)
+	address := config.Get("hosts", "database", "address").String("localhost")
+ 
+	rsp.Msg = "Hello " + req.Name + " host " + address
 	return nil
 }
 

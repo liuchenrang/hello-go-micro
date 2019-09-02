@@ -11,6 +11,7 @@ import (
 )
 
 type apiKey struct{}
+type apiHi struct{}
 
 // FromContext retrieves the client from the Context
 func ApiFromContext(ctx context.Context) (api.HelloService, bool) {
@@ -25,7 +26,14 @@ func ApiWrapper(service micro.Service) server.HandlerWrapper {
 	return func(fn server.HandlerFunc) server.HandlerFunc {
 		return func(ctx context.Context, req server.Request, rsp interface{}) error {
 			ctx = context.WithValue(ctx, apiKey{}, client)
+			ctx = context.WithValue(ctx, apiHi{}, service)
+			
 			return fn(ctx, req, rsp)
 		}
 	}
+}
+
+func ServiceFromContext(ctx context.Context) (micro.Service, bool) {
+	c, ok := ctx.Value(apiHi{}).(micro.Service)
+	return c, ok
 }
