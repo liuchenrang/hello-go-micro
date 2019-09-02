@@ -13,8 +13,7 @@ type HelloService struct{}
 func (e *HelloService) Call(ctx context.Context, req *helloService.Request, rsp *helloService.Response) error {
 	log.Log("Received HelloService.Call request 11 " + req.Name)
 	
-	address := config.Get("config-center", "development", "project", "prefix").String("localhost")
- 
+	address := config.Get( "address").String("localhost")
 	rsp.Msg = "Hello " + req.Name + " host " + address
 	return nil
 }

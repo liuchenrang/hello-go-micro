@@ -10,6 +10,9 @@ import (
 	helloService "xiaoshijie.com/micro/hello/srv/proto/helloService"
 	"xiaoshijie.com/micro/hello/srv/provider"
 	"xiaoshijie.com/micro/hello/srv/subscriber"
+	
+	_ "github.com/micro/go-plugins/registry/etcdv3"
+
 )
 
 func main() {
@@ -23,8 +26,12 @@ func main() {
 	service.Init(micro.Action(func(context *cli.Context) {
 		log.Logf("start application")
 		// Create new config
-		conf := config.NewConfig()
-		conf.Load(provider.EtcdSource)
+		//config.WithSource(provider.EtcdSource)
+		err := config.Load(provider.EtcdSource)
+		if err != nil {
+			println(err.Error())
+		}
+		
 	}),micro.BeforeStart(func() error {
 		
 		return nil

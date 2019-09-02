@@ -8,11 +8,13 @@ var (
 	EtcdSource source.Source
 )
 func init()  {
+	println("ectd source init")
 	EtcdSource = etcd.NewSource(
 		// optionally specify etcd address; default to localhost:8500
-		etcd.WithAddress("127.0.0.1:2379"),
+		etcd.WithAddress("192.168.1.122:12379"),
 		// optionally specify prefix; defaults to /micro/config
-		etcd.WithPrefix("/config-center/development/project/prefix"),
+		//etcd.WithPrefix("/config-center/development/project/prefix"),
+		etcd.WithPrefix("/micro/config"),
 		// optionally strip the provided prefix from the keys, defaults to false
 		etcd.StripPrefix(true),
 	)
