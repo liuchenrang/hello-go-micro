@@ -7,7 +7,8 @@ import (
 	"github.com/micro/go-micro/server"
 	 //api "xiaoshijie.com/micro/hello/api/proto/api"
 	 api "xiaoshijie.com/micro/hello/srv/proto/helloService"
-
+	 //api "../../srv/proto/helloService"
+	
 )
 
 type apiKey struct{}

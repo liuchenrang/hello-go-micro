@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/util/log"
-	helloService "xiaoshijie.com/micro/hello/srv/proto/helloService"
 
 	api "github.com/micro/go-micro/api/proto"
 	"github.com/micro/go-micro/errors"
@@ -30,7 +29,7 @@ func (e *Api) Call(ctx context.Context, req *api.Request, rsp *api.Response) err
 	log.Log("Received Api.Call request")
 	ser,_ := client.ServiceFromContext(ctx)
 	p := micro.NewPublisher("go.micro.srv.helloService",ser.Client())
-	p.Publish(context.TODO(), &helloService.Request{Name:"who"})
+	p.Publish(context.TODO(), &api2.Request{Name:"who"})
 	// extract the client from the context
 	apiClient, ok := client.ApiFromContext(ctx)
 	if !ok {

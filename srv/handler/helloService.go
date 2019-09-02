@@ -14,7 +14,8 @@ type HelloService struct{}
 // Call is a single request handler called via client.Call or the generated client code
 func (e *HelloService) Call(ctx context.Context, req *helloService.Request, rsp *helloService.Response) error {
 	log.Log("Received HelloService.Call request 11 " + req.Name)
-	address := config.Get("hosts", "database", "address").String("localhost")
+	
+	address := config.Get("config-center", "development", "project", "prefix").String("localhost")
  
 	rsp.Msg = "Hello " + req.Name + " host " + address
 	return nil

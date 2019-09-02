@@ -3,13 +3,13 @@ package main
 import (
 	"github.com/micro/cli"
 	"github.com/micro/go-micro"
-	"github.com/micro/go-micro/config/source/consul"
+	"github.com/micro/go-micro/config"
+	"github.com/micro/go-micro/service/grpc"
 	"github.com/micro/go-micro/util/log"
 	"xiaoshijie.com/micro/hello/srv/handler"
+	helloService "../srv/proto/helloService"
+	"xiaoshijie.com/micro/hello/srv/provider"
 	"xiaoshijie.com/micro/hello/srv/subscriber"
-    "github.com/micro/go-micro/config"
-	"github.com/micro/go-micro/service/grpc"
-	helloService "xiaoshijie.com/micro/hello/srv/proto/helloService"
 )
 
 func main() {
@@ -22,8 +22,9 @@ func main() {
 	// Initialise service
 	service.Init(micro.Action(func(context *cli.Context) {
 		log.Logf("start application")
-		config.LoadFile("//Users/chen/GoPath/src/xiaoshijie.com/micro/hello/srv/config/srv.json")
-		config.WithSource(consul.NewSource())
+		// Create new config
+		conf := config.NewConfig()
+		conf.Load(provider.EtcdSource)
 	}),micro.BeforeStart(func() error {
 		
 		return nil
