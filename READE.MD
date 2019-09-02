@@ -15,4 +15,4 @@
 ###go-etcd-配置中心
    配置中心的client的代码采用的是etcdv3接口。
 ###go-etcd-服务注册
-   注册中心采用的是 etcdv2接口
+   注册中心采用的是 etcdv3接口
