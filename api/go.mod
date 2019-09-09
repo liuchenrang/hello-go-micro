@@ -10,3 +10,5 @@ require (
 )
 
 replace xiaoshijie.com/micro/hello/srv => ../srv
+
+replace xiaoshijie.com/micro/common => ../../common

@@ -16,3 +16,6 @@
    配置中心的client的代码采用的是etcdv3接口。
 ###go-etcd-服务注册
    注册中心采用的是 etcdv3接口
+   
+   
+xorm reverse mysql "xsj_test_hd:t2t_e0e_s1s_t5t@tcp(rm-bp1eifgih690z1h372o.mysql.rds.aliyuncs.com:3306)/xsj_master?charset=utf8&parseTime=True&loc=Local" $GOPATH/src/github.com/go-xorm/cmd/xorm/templates/goxorm ./models cloud_user 
