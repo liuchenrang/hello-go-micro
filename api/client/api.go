@@ -2,7 +2,10 @@ package client
 
 import (
 	"context"
-
+	"github.com/micro/go-plugins/wrapper/trace/opentracing"
+	"github.com/uber/jaeger-client-go/config"
+	"time"
+	
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/server"
 	 //api "xiaoshijie.com/micro/hello/api/proto/api"
@@ -22,8 +25,29 @@ func ApiFromContext(ctx context.Context) (api.HelloService, bool) {
 
 // Client returns a wrapper for the ApiClient
 func ApiWrapper(service micro.Service) server.HandlerWrapper {
-	client := api.NewHelloService("go.micro.srv.helloService", service.Client())
-
+	cfg := config.Configuration{
+		ServiceName: "apiCall",//自定义服务名称
+		Sampler: &config.SamplerConfig{
+			Type:  "const",
+			Param: 1,
+		},
+		Reporter: &config.ReporterConfig{
+			LogSpans:            true,
+			BufferFlushInterval: 1 * time.Second,
+			LocalAgentHostPort:  "127.0.0.1:5775",//jaeger agent
+		},
+	}
+	tracer, closer, err := cfg.NewTracer()
+	if err != nil {
+		println(err.Error())
+		return nil
+	}
+	defer closer.Close()
+	
+	clientWapper := opentracing.NewClientWrapper(tracer)
+	
+	client := api.NewHelloService("go.micro.srv.helloService",clientWapper( service.Client()))
+	
 	return func(fn server.HandlerFunc) server.HandlerFunc {
 		return func(ctx context.Context, req server.Request, rsp interface{}) error {
 			ctx = context.WithValue(ctx, apiKey{}, client)
