@@ -3,6 +3,7 @@ package handler
 import (
 	"context"
 	"encoding/json"
+	"github.com/micro/go-micro"
 	client2 "github.com/micro/go-micro/client"
 	"github.com/micro/go-micro/util/log"
 	
@@ -28,9 +29,9 @@ func extractValue(pair *api.Pair) string {
 func (e *Api) Call(ctx context.Context, req *api.Request, rsp *api.Response) error {
 	log.Log("Received Api.Call request")
 
-	//ser,_ := client.ServiceFromContext(ctx)
-	//p := micro.NewPublisher("go.micro.srv.helloService",ser.Client())
-	//p.Publish(context.TODO(), &api2.Request{Name:"who"})
+	ser,_ := client.ServiceFromContext(ctx)
+	p := micro.NewPublisher("go.micro.srv.helloService",ser.Client())
+	p.Publish(context.TODO(), &api2.Request{Name:"who"})
 	// extract the client from the context
 	apiClient, ok := client.ApiFromContext(ctx)
 	
