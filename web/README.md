@@ -53,3 +53,12 @@ Build a docker image
 ```
 make docker
 ```
+
+ REGISTER_AUTH_USERNAME=root;REGISTER_AUTH_PASSWORD=mm123456 REGISTER_AUTH_USERNAME=root REGISTER_AUTH_PASSWORD=mm123456 go run main.go plugin.go --registry=etcdv3  --registry_address 0.0.0.0:2379,0.0.0.0:12379,0.0.0.0:22379
+
+
+Go Proxy Bug
+
+```cassandraql
+replace github.com/gogo/protobuf v0.0.0-20190410021324-65acae22fc9 => github.com/gogo/protobuf v1.3.0
+```
