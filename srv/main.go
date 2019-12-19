@@ -13,8 +13,6 @@ import (
 	helloService "xiaoshijie.com/micro/hello/srv/proto/helloService"
 	"xiaoshijie.com/micro/hello/srv/provider"
 	"xiaoshijie.com/micro/hello/srv/subscriber"
-	
-	_ "github.com/micro/go-plugins/registry/etcdv3"
 )
 
 func main() {

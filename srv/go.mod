@@ -13,7 +13,6 @@ require (
 	github.com/pkg/errors v0.8.1
 	github.com/uber/jaeger-client-go v2.16.0+incompatible
 	google.golang.org/grpc v1.22.1
-	xiaoshijie.com/go-xorm/core v0.0.0-00010101000000-000000000000 // indirect
 	xiaoshijie.com/go-xorm/xorm v0.0.0-00010101000000-000000000000
 	xiaoshijie.com/micro/common v0.0.0-00010101000000-000000000000
 )

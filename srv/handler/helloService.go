@@ -33,6 +33,7 @@ func (e *HelloService) Call(ctx context.Context, req *helloService.Request, rsp 
 		},
 	}
 	md, _ := metadata.FromIncomingContext(ctx)
+	badHeader := md.Get(jaeger.TraceContextHeaderName)
 	
 	fmt.Printf("%+v",md)
 	tracer, closer, err := cfg.NewTracer()
