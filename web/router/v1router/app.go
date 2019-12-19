@@ -2,7 +2,7 @@ package v1router
 
 import (
 	"github.com/gin-gonic/gin"
-	"xiaoshijie.com/micro/tbservice/tb-service-web/controller/v1controller"
+	"duoduo.com/micro/tbservice/tb-service-web/controller/v1controller"
 )
 
 func InitV1Router(r gin.IRoutes)  {

@@ -9,8 +9,8 @@ import (
 	
 	api "github.com/micro/go-micro/api/proto"
 	"github.com/micro/go-micro/errors"
-	"xiaoshijie.com/micro/hello/api/client"
-	api2 "xiaoshijie.com/micro/hello/srv/proto/helloService"
+	"duoduo.com/micro/hello/api/client"
+	api2 "duoduo.com/micro/hello/srv/proto/helloService"
 )
 
 type Api struct{}

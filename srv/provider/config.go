@@ -3,8 +3,8 @@ package provider
 import (
 	config2 "github.com/micro/go-micro/config"
 	"log"
-	"xiaoshijie.com/micro/common/provider"
-	"xiaoshijie.com/micro/hello/srv/config"
+	"duoduo.com/micro/common/provider"
+	"duoduo.com/micro/hello/srv/config"
 )
 
 type ProviderConfig struct {

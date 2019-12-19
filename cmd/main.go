@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/micro/go-micro/config/cmd"
-	"xiaoshijie.com/micro/tbservice/tb-service-cmd/command"
+	"duoduo.com/micro/tbservice/tb-service-cmd/command"
 )
 
 // Init initialised the command line

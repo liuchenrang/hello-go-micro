@@ -23,7 +23,7 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 func init() {
-	proto.RegisterFile("xiaoshijie.com/micro/hello/api/proto/api/api.proto", fileDescriptor_ca6d5bbc959d58c0)
+	proto.RegisterFile("duoduo.com/micro/hello/api/proto/api/api.proto", fileDescriptor_ca6d5bbc959d58c0)
 }
 
 var fileDescriptor_ca6d5bbc959d58c0 = []byte{

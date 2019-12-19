@@ -3,8 +3,8 @@ package provider
 import (
 	"github.com/go-redis/redis"
 	"time"
-	config2 "xiaoshijie.com/micro/common/config"
-	"xiaoshijie.com/micro/hello/srv/config"
+	config2 "duoduo.com/micro/common/config"
+	"duoduo.com/micro/hello/srv/config"
 )
 
 var ()

@@ -1,6 +1,6 @@
 package config
 
-import "xiaoshijie.com/micro/common/config"
+import "duoduo.com/micro/common/config"
 
 var (
 	ServiceConf ServiceConfig

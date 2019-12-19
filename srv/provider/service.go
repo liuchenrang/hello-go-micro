@@ -1,8 +1,8 @@
 package provider
 
 import (
-	"xiaoshijie.com/micro/hello/srv/config"
-	"xiaoshijie.com/micro/hello/srv/services"
+	"duoduo.com/micro/hello/srv/config"
+	"duoduo.com/micro/hello/srv/services"
 )
 
 var (

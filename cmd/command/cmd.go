@@ -10,7 +10,7 @@ import (
 	"github.com/micro/micro/plugin"
 	"os"
 	"strings"
-	"xiaoshijie.com/micro/tbservice/tb-service-cmd/command/hello"
+	"duoduo.com/micro/tbservice/tb-service-cmd/command/hello"
 )
 
 // Setup sets up a cli.App

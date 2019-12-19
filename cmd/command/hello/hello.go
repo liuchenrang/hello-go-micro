@@ -6,7 +6,7 @@ import (
 	"github.com/micro/cli"
 	"github.com/micro/go-micro/client"
 	"github.com/micro/go-micro/config/cmd"
-	tbServiceSrv "xiaoshijie.com/micro/common/proto/tbServiceSrv"
+	tbServiceSrv "duoduo.com/micro/common/proto/tbServiceSrv"
 )
 
 

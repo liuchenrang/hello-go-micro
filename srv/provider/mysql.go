@@ -3,9 +3,9 @@ package provider
 import (
 	"fmt"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
-	"xiaoshijie.com/go-xorm/xorm"
-	config2 "xiaoshijie.com/micro/common/config"
-	"xiaoshijie.com/micro/hello/srv/config"
+	"duoduo.com/go-xorm/xorm"
+	config2 "duoduo.com/micro/common/config"
+	"duoduo.com/micro/hello/srv/config"
 )
 
 var ()

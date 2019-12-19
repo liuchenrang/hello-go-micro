@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/micro/go-micro/util/log"
 	
-	helloService "xiaoshijie.com/micro/hello/srv/proto/helloService"
+	helloService "duoduo.com/micro/hello/srv/proto/helloService"
 )
 
 type HelloService struct{}

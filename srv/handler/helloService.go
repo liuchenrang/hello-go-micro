@@ -10,8 +10,8 @@ import (
 	"google.golang.org/grpc/metadata"
 	
 	"time"
-	helloService "xiaoshijie.com/micro/hello/srv/proto/helloService"
-	"xiaoshijie.com/micro/hello/srv/services"
+	helloService "duoduo.com/micro/hello/srv/proto/helloService"
+	"duoduo.com/micro/hello/srv/services"
 )
 
 type HelloService struct{}

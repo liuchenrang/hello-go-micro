@@ -5,17 +5,17 @@ import (
 	"github.com/micro/go-micro/client"
 	"github.com/micro/go-micro/client/grpc"
 	"github.com/micro/go-micro/util/log"
-	"xiaoshijie.com/micro/common/bootstrap"
-	provider2 "xiaoshijie.com/micro/common/provider"
-	"xiaoshijie.com/micro/tbservice/tb-service-srv/config"
-	"xiaoshijie.com/micro/tbservice/tb-service-srv/provider"
+	"duoduo.com/micro/common/bootstrap"
+	provider2 "duoduo.com/micro/common/provider"
+	"duoduo.com/micro/tbservice/tb-service-srv/config"
+	"duoduo.com/micro/tbservice/tb-service-srv/provider"
 	
 	"github.com/micro/go-micro/web"
 	"github.com/micro/go-plugins/registry/etcdv3"
 	"net/http"
 	"os"
 	"time"
-	"xiaoshijie.com/micro/tbservice/tb-service-web/router"
+	"duoduo.com/micro/tbservice/tb-service-web/router"
 )
 
 

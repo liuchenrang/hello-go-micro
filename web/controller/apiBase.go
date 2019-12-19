@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"xiaoshijie.com/micro/common/http/baseController"
+	"duoduo.com/micro/common/http/baseController"
 )
 
 type ApiBaseController struct {

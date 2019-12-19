@@ -6,13 +6,13 @@ import (
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/service/grpc"
 	"github.com/micro/go-micro/util/log"
-	"xiaoshijie.com/micro/common/bootstrap"
-	provider2 "xiaoshijie.com/micro/common/provider"
-	"xiaoshijie.com/micro/hello/srv/config"
-	"xiaoshijie.com/micro/hello/srv/handler"
-	helloService "xiaoshijie.com/micro/hello/srv/proto/helloService"
-	"xiaoshijie.com/micro/hello/srv/provider"
-	"xiaoshijie.com/micro/hello/srv/subscriber"
+	"duoduo.com/micro/common/bootstrap"
+	provider2 "duoduo.com/micro/common/provider"
+	"duoduo.com/micro/hello/srv/config"
+	"duoduo.com/micro/hello/srv/handler"
+	helloService "duoduo.com/micro/hello/srv/proto/helloService"
+	"duoduo.com/micro/hello/srv/provider"
+	"duoduo.com/micro/hello/srv/subscriber"
 )
 
 func main() {

@@ -3,10 +3,10 @@ package router
 import (
 	"github.com/gin-gonic/gin"
 	"gopkg.in/natefinch/lumberjack.v2"
-	"xiaoshijie.com/micro/common/http/middleware"
-	"xiaoshijie.com/micro/tbservice/tb-service-web/router/v1router"
-	"xiaoshijie.com/micro/tbservice/tb-service-web/router/v3router"
-	"xiaoshijie.com/micro/tbservice/tb-service-web/router/v4router"
+	"duoduo.com/micro/common/http/middleware"
+	"duoduo.com/micro/tbservice/tb-service-web/router/v1router"
+	"duoduo.com/micro/tbservice/tb-service-web/router/v3router"
+	"duoduo.com/micro/tbservice/tb-service-web/router/v4router"
 )
 var (
 	//r *gin.Engine

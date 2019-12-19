@@ -1,7 +1,7 @@
 package bootstrap
 
 import (
-	"xiaoshijie.com/micro/common/contracts"
+	"duoduo.com/micro/common/contracts"
 )
 
 var (

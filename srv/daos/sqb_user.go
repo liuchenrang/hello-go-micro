@@ -4,13 +4,13 @@ import (
      
         "errors"
      
-        "xiaoshijie.com/go-xorm/xorm"
+        "duoduo.com/go-xorm/xorm"
      
-        "xiaoshijie.com/micro/common/components"
+        "duoduo.com/micro/common/components"
      
-        "xiaoshijie.com/micro/hello/srv/config"
+        "duoduo.com/micro/hello/srv/config"
      
-        "xiaoshijie.com/micro/hello/srv/models"
+        "duoduo.com/micro/hello/srv/models"
      
 )
 

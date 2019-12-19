@@ -4,9 +4,9 @@ import (
 	"context"
 	"github.com/gin-gonic/gin"
 	"github.com/micro/go-micro/client"
-	"xiaoshijie.com/micro/common/http/dto"
-	tbServiceSrv "xiaoshijie.com/micro/common/proto/tbServiceSrv"
-	"xiaoshijie.com/micro/tbservice/tb-service-web/controller"
+	"duoduo.com/micro/common/http/dto"
+	tbServiceSrv "duoduo.com/micro/common/proto/tbServiceSrv"
+	"duoduo.com/micro/tbservice/tb-service-web/controller"
 )
 
 func Push(c *gin.Context) {

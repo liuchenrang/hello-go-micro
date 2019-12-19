@@ -9,10 +9,10 @@ import (
 	"github.com/uber/jaeger-client-go/config"
 	"os"
 	"time"
-	"xiaoshijie.com/micro/hello/api/client"
-	"xiaoshijie.com/micro/hello/api/handler"
+	"duoduo.com/micro/hello/api/client"
+	"duoduo.com/micro/hello/api/handler"
 	
-	api "xiaoshijie.com/micro/hello/api/proto/api"
+	api "duoduo.com/micro/hello/api/proto/api"
 )
 func GrpcClient() micro.Option {
 	return func(o *micro.Options) {
